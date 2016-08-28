@@ -2,7 +2,7 @@ $(function(){
     //waits 3 seconds before running anything
     setTimeout(function(){
 
-        $('body').append('<div class="test"></div>');
+        $('body').append('<div class="test text-center"><h1>#</h1></div>');
         $('.test').addClass('animation');
         $('.animation').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',
             function(e){
