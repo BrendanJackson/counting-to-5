@@ -29,6 +29,6 @@ else infinite loop
 * TODO: write algorithm to capture random# generated and pop it into 100% "left" field and reset on next generated box.
 */
 @keyframes test {
-    0%   { top: 0px; left:<?=rand(1,725);?>px;}
-    100% { top: 500px;  }
+    0%   { top: 500px; left:<?=rand(1,725);?>px;}
+    100% { top: 0px;  }
 }
