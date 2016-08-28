@@ -2,6 +2,26 @@ $(function(){
     //variables
     var number;    //counts how many times "clicked" class has been added per round
     var counter;   //checks how many times bubble has been "clicked"
+    var bubbleAnimation =  function bubbleAnimation()
+    {
+        $('body').append('<div class="test text-center"></div>');
+        $('.test').addClass('animation');
+        $('.animation').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',
+            function (e) {
+                //clicked it waits 3 seconds before disappearing
+                if ($('.test').hasClass('clicked')) {
+                    $('.test').fadeOut(3000, function () {
+                        $(this).remove();
+                    });
+                } else {
+                    //clicked it waits 1 second before disappearing
+                    $('.test').fadeOut(1000, function () {
+                        $(this).remove();
+                    });
+                }
+            });
+    }
+
 
     //counter is checked periodically
     function checkForChanges(){
@@ -20,28 +40,13 @@ $(function(){
     //waits 3 seconds before running anything
     setTimeout(function(){
 
-        $('body').append('<div class="test text-center"></div>');
-        $('.test').addClass('animation');
-        $('.animation').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',
-            function(e){
-                //clicked it waits 3 seconds before disappearing
-                if($('.test').hasClass('clicked')){
-                    $('.test').fadeOut(3000, function(){
-                        $(this).remove();
-                    });
-                } else {
-                    //clicked it waits 1 second before disappearing
-                    $('.test').fadeOut(1000, function(){
-                        $(this).remove();
-                    });
-                }
-            });
-
+        bubbleAnimation();
 
     }, 3000);
+
 });
 
-/*
+/* function is not very modular, fix this so you can run things more cleanly
 * if(counter == 3){
 *   run next level
 * } else {
