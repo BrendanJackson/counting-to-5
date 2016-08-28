@@ -1,9 +1,23 @@
 $(function(){
+    //variables
+    var number;    //counts how many times "clicked" class has been added per round
+    var counter;   //checks how many times bubble has been "clicked"
+
+    //counter is checked periodically
+    function checkForChanges(){
+        if ($('.test').hasClass('clicked')){
+            var i = 0;
+            counter = ++i;
+            console.log(counter);
+        } else{
+            setTimeout(checkForChanges, 500);
+        }
+    }
+    //counter function is called
+        $(checkForChanges);
+
+
     //waits 3 seconds before running anything
-
-    //counts how many times "clicked" class has been added per round
-    var number;
-
     setTimeout(function(){
 
         $('body').append('<div class="test text-center"></div>');
@@ -27,9 +41,19 @@ $(function(){
     }, 3000);
 });
 
+/*
+* if(counter == 3){
+*   run next level
+* } else {
+*   loop bubble animation
+* }
+*
+* */
+
+
 
 //on click adds the class "clicked" and appends a "number" to the div
-$(document).on({
+$(document).one({
     click: function(e) {
         number = 1;
         $(this).addClass('clicked');
