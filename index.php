@@ -30,5 +30,7 @@
     <li></li>
 </ol>
 
+<h1 class="count">0</h1>
+
 </body>
 </html>
