@@ -33,7 +33,7 @@
 <div class="col-xs-6">
     <h1>issues</h1>
     <ul>
-        <li>appending number does not "always" appear inside the 1st div</li>
+         <li>php rand in CSS, unbind after each animation</li>
     </ul>
 </div>
 

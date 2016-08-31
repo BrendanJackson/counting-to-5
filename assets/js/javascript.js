@@ -23,7 +23,7 @@ $(function(){
                     bubbleAnimation();
                 }
             });
-    }
+    };
 
 
     //waits 3 seconds before running anything
@@ -34,28 +34,27 @@ $(function(){
     }, 3000);
 
     //on click adds the class "clicked" and  appends a "number" to the div
+    /*
     $(document).on({
         click: function(e) {
 
-
-            $(this).addClass('clicked');
-
        }
     }, '.test');
+    */
 
     //adds data once per element, not once per page
     $('body').delegate('.test', 'click', function() {
+        $(this).addClass('clicked');
         if($(this).data('clicked')) {
             return;
         }
         ++count;
         ++number;
-        $(".count").html(+count);
-        console.log("count:" + count );
-        $(this).append('<h1>' + number + '</h1>');
+        $(".count").html(count);
+        console.log("count: " + count );
+        $(this).html('<h1>' + number + '</h1>');
 
         $(this).data('clicked', true);
 
     });
-
 });
