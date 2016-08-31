@@ -4,9 +4,7 @@
     <title>Counting to 5</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="assets/js/jquery_library.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="assets/css/styles.php">
     <script src="assets/js/javascript.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,7 +19,7 @@
     <li>at animation end, counter for times "clicked" class has been added is checked</li>
     <li>For everytime the class "clicked" is added to a bubble, +1 is added to a (hidden) counter</li>
     <li>if counter !== 3, restart loop with no delay</li>
-    <li>When Counter == 3, go to the next level</li>
+    <li><strong>When Counter == 3, go to the next level</strong></li>
     <li>level # pops up and fades out on screen for 3 seconds</li>
     <li>a bubble floats up</li>
     <li>1 seconds later another bubble floats up</li>
@@ -30,7 +28,14 @@
     <li></li>
 </ol>
 
-<h1 class="count">0</h1>
+<h1 class="count"></h1>
+<div class="col-xs-6"></div>
+<div class="col-xs-6">
+    <h1>issues</h1>
+    <ul>
+        <li>appending number does not "always" appear inside the 1st div</li>
+    </ul>
+</div>
 
 </body>
 </html>
