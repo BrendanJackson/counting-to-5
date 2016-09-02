@@ -31,7 +31,7 @@ else infinite loop
 }
 
 .animation {
-    animation: test 4s linear 1 forwards;
+    animation: test 10s linear 1 forwards;
 }
 
 /**
