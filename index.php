@@ -1,4 +1,6 @@
-<?php include('/assets/inc/header.php') ?>
+<?php include('/assets/inc/header.php')
+//TODO: CUT OUT HEADER.PHP
+?>
 <div class="col-xs-6">
     <ol>
         <li>page loads</li>
@@ -19,9 +21,10 @@
 <div class="col-xs-6">
     <h1>issues</h1>
     <ul>
-         <li>php rand in CSS, unbind after each animation</li>
+        <li>php rand in CSS, unbind after each animation</li>
         <li>JS "case" does not work without "index.php"</li>
         <li>on "remove()" of animation then perform "check" variable</li>
+        <li>change level 2 link, at the end of round 3 do something then go to level-2</li>
     </ul>
 </div>
 <?php include('/assets/inc/footer.php') ?>

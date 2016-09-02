@@ -1,9 +1,10 @@
 <?php
+//TODO: CUT OUT HEADER.PHP
 $javascript;
 $url = $_SERVER['REQUEST_URI'];
   switch ($url){
       // case "/five/",|| substr( $url, 0, 7 ) === "/five/\40"
-            case "/five/index.php"  : $javascript = "javascript.js"; break;
+            case "/five/index.php" || "/five/" : $javascript = "javascript.js"; break;
             case "/five/level-2.php": $javascript = "javascript2.js"; break;
             case "/five/level-3.php": $javascript = "javascript3.js"; break;
             case "/five/level-4.php": $javascript = "javascript4.js"; break;
@@ -11,7 +12,8 @@ $url = $_SERVER['REQUEST_URI'];
             default: $javascript = "something is wrong"; break;
           }
 
-print_r($url);
+//print_r($url);
+print_r($javascript);
 ?>
 <!DOCTYPE html>
 <head>
