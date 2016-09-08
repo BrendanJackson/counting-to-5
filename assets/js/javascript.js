@@ -4,11 +4,10 @@ $(function(){
     var number = 0;    //counts how many times "clicked" class has been added per round
     var round = 0;     //checks how many times bubble has been "clicked"
     var check = function check() {
-        if (number != 3) {
-            bubbleAnimation();
-        } else {
-
+        if (round >= 3) {
             window.open("level-2.php", "_self");
+        } else {
+            bubbleAnimation();
         }
     }
     var bubbleAnimation =  function bubbleAnimation()
